@@ -26,7 +26,7 @@
         4. Transitive Dependencies (If we add hibernate-core it will add other dependencies it depends on like jpa, common-annotations etc.)
         5. Scopes by default is set to compile. (6 types of scope.<scope> test </scope> (test means will not be added in final artifact, only for tests.) )
     3. Build (Plugins, Dir Str)
-        1. Can override final name by adding <build> <final> NewName.tar </final> </build>
+        1. Can override final name by adding `<build> <final> NewName.tar </final> </build>`
         2. 
     4. Repositories (Maven Central Repo / Internal Repos)
 3. Goals of Maven : 
