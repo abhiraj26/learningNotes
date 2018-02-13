@@ -26,14 +26,22 @@
         4. Transitive Dependencies (If we add hibernate-core it will add other dependencies it depends on like jpa, common-annotations etc.)
         5. Scopes by default is set to compile. (6 types of scope.<scope> test </scope> (test means will not be added in final artifact, only for tests.) )
     3. Build (Plugins, Dir Str)
-        1. Can override final name by adding `<build> <final> NewName.tar </final> </build>`
-        2. 
+        1. Can override final name by adding `<build> <final> NewName.tar </final> </build>`. We define all our plugins in this section.
     4. Repositories (Maven Central Repo / Internal Repos)
+        1. Can add dependencies from different repos. Need to add yoour repos link in `<repository> </repository>`. The new changes come after saving the file.
+    5. Plugins : 
+        1. Goals : Can configure all clean,compile,test,package etc. It all is developed in super.pom , can be overriden. Goals are tied to phases. We write these code in `<execute><goals>` part in pom.xml, can make it to clean everytime we compile etc. 
+        2. Phases : validate (Project has all neccesary details.), compile, integeration-test(Allow us to deploy and test code.) etc.
+        Eg. Compiler Plugin Invokes javac, build the classpath set from dependencies. Defaults to java 1.5 regardless of our jdk version. In our pom `<configuration>` part we can set things like it can fork, change the memory settings and source and target dirs etc.
+        
+        3. Jar : Can include and exclude xml etc things in our jar file, manifest file
+        4. Source : add Source to jar, source-jar in repo
+        5. Javadoc : add JavaDoc to jar , can change the plugin to do it at some other phase like verify and install in the local repo.
 3. Goals of Maven : 
     1. clean : delete target
     2. compile : add source code .class versions to classes and tests java files to tests
     3. package : add .jar file to target
     4. install : copy it to my local repo mvn install : /.m2/repo in form of (groupId)com/company/..   (It does what package does also.)
     5. tests : Run the tests in java
-    6. deploy : 
+    6. deploy : Deploy it to repo.
   
