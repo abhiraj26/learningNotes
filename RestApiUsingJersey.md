@@ -26,9 +26,11 @@
   4. Binary for Files,Images,Pdf used as @Produces(MediaType.APPLICATION_OCTET_STREAM).
   
 #Using HTTP Get
-  1. Needs to add XMLRootElement if error message is MessageBodyWriter not found for media type=xml
+  1. Needs to add <b>XMLRootElement</b> if error message is MessageBodyWriter not found for media type=xml
   2. Jersey Doesnt know how to add marshal POJO's to XML. Uses JaxB to do Java-to-XML.
   3. We use @Produces with GET. 
   4. JAXB converts POJO to XML and XML to JSON. 
   5. Add Postman to Chrome to have multiple Producer Type. \\ Not required
+  6. If want to get a particular attribute use @Path("{activityId}") curly braces means value is to be used and add Path Param to the functions as @PathParam("activityId") String activityId
+  7. To get multiple path we write like : @Path("{activityId}/user") and search for the user with the particular id.
   
