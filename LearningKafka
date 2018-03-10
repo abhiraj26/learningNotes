@@ -12,3 +12,19 @@
       Writing own middleware maybe cheap at first but overall complexities increases. 
       Apache names after a German Author who writes nightmarish stories which was surreal. 
       
+      
+# Kafka's Architecture
+
+  1. Publishers are called as producers and subscribers who are elgible to read that data are called consumers. They are simple 
+  application that use the api calls for producing or consuming. (Java Codes)
+  2. Used something called TOPIC which store these messages and decide where to send the data. 
+  3. Brokers : Place where Kafka keeps Topic physically, It is a executable which runs on physical machine or a virtual machine and 
+  also called as server. 
+  4. Cluster : Combination of broker running on same host or different host.
+  5. Apache Zookeper : Centralised service for maintaining metadata about a cluster of distributed nodes. (For communication and consensus
+  purposes. ). One ensemble of zookeper can handle one or more clusters. 
+  
+  # Topics, Partitions, Brokers
+  
+  1. 
+  
