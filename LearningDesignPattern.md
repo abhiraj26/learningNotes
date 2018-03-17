@@ -25,4 +25,7 @@
       c. Lazily Loaded. (When Needed)
  2. Examples : Spring Beans (By Default Singleton) , Logger
  3. In Singelton, class is not static because then it will not be thread safe, it has a private constructor and a getInstance static method because object cannot be made and only one instance is required. If <b> parameters </b> need to be given for constructor then it will not be singelton pattern. 
- 4. 
+ 4. Pitfalls : Often overused, difficult to unit test, not thread safe most of the times, confused with factory, 
+ 5. Very similar to Factory method except it has only one constructor and no params + return one single instance and no interface is defined. 
+ 
+ ## Builder Pattern 
